@@ -1,0 +1,15 @@
+body, html {
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+.container {
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.container>div {
+    background-color: #fbf9fe;
+}
+.tabbar {
+    height: 100%;
+}
