@@ -28,5 +28,5 @@ angular.module('start', ['ui.router','squareCtrl'])
 		// 	controller: 'personCtrl'
 		// });
 
-	$urlRouterProvider.otherwise('/squareTab');
+	$urlRouterProvider.otherwise('/squareTab/square');
 });

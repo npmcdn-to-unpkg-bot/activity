@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title></title>
+		<link rel="stylesheet" href="bower/jquery-weui/dist/lib/weui.min.css">
+		<link rel="stylesheet" href="bower/jquery-weui/dist/css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		
+		<!-- body 顶部加上如下代码 -->
+		<div class="text">
+		<div class="weui-pull-to-refresh-layer">
+			<div class="pull-to-refresh-arrow"></div> <!-- 上下拉动的时候显示的箭头 -->
+			<div class="pull-to-refresh-preloader"></div> <!-- 正在刷新的菊花 -->
+			<div class="down">下拉刷新</div><!-- 下拉过程显示的文案 -->
+			<div class="up">释放刷新</div><!-- 下拉超过50px显示的文案 -->
+			<div class="refresh">正在刷新...</div><!-- 正在刷新时显示的文案 -->
+		</div>
+		</div>
+
+		<!-- 其他内容 -->
+
+
+       
+    	<script src="bower/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+		<script src="bower/jquery-weui/dist/js/jquery-weui.min.js"></script>
+    	<!-- 本地js -->
+    	
+    	<script type="text/javascript">
+    		$('.text').pullToRefresh();
+    		$('.text').on("pull-to-refresh", function() {
+    			$('.text').pullToRefreshDone();
+    		});
+    	</script>
+    </body>
+</html>
