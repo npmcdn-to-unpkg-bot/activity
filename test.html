@@ -11,19 +11,51 @@
 	</head>
 	<body>
 		
-		<!-- body 顶部加上如下代码 -->
-		<div class="text">
-		<div class="weui-pull-to-refresh-layer">
-			<div class="pull-to-refresh-arrow"></div> <!-- 上下拉动的时候显示的箭头 -->
-			<div class="pull-to-refresh-preloader"></div> <!-- 正在刷新的菊花 -->
-			<div class="down">下拉刷新</div><!-- 下拉过程显示的文案 -->
-			<div class="up">释放刷新</div><!-- 下拉超过50px显示的文案 -->
-			<div class="refresh">正在刷新...</div><!-- 正在刷新时显示的文案 -->
+		<div class="weui_tab" id='page-ptr-navbar'>
+			<div class="weui_navbar">
+				<a href='#tab1' class="weui_navbar_item weui_bar_item_on">
+					选项一
+				</a>
+				<a href='#tab2' class="weui_navbar_item">
+					选项二
+				</a>
+				<a href='#tab3' class="weui_navbar_item">
+					选项三
+				</a>
+			</div>
+			<div class="weui_tab_bd">
+				<div id="tab1" class="weui_tab_bd_item weui_tab_bd_item_active">
+					<div class="weui-pull-to-refresh-layer">
+						<div class="pull-to-refresh-arrow"></div>
+						<div class="pull-to-refresh-preloader"></div>
+						<div class="down">下拉刷新</div>
+						<div class="up">释放刷新</div>
+						<div class="refresh">正在刷新...</div>
+					</div>
+					<h1 class="doc-head">页面一</h1>
+				</div>
+				<div id="tab2" class="weui_tab_bd_item">
+					<div class="weui-pull-to-refresh-layer">
+						<div class="pull-to-refresh-arrow"></div>
+						<div class="pull-to-refresh-preloader"></div>
+						<div class="down">下拉刷新</div>
+						<div class="up">释放刷新</div>
+						<div class="refresh">正在刷新...</div>
+					</div>
+					<h1 class="doc-head">页面二</h1>
+				</div>
+				<div id="tab3" class="weui_tab_bd_item">
+					<div class="weui-pull-to-refresh-layer">
+						<div class="pull-to-refresh-arrow"></div>
+						<div class="pull-to-refresh-preloader"></div>
+						<div class="down">下拉刷新</div>
+						<div class="up">释放刷新</div>
+						<div class="refresh">正在刷新...</div>
+					</div>
+					<h1 class="doc-head">页面三</h1>
+				</div>
+			</div>
 		</div>
-		</div>
-
-		<!-- 其他内容 -->
-
 
        
     	<script src="bower/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
@@ -31,9 +63,9 @@
     	<!-- 本地js -->
     	
     	<script type="text/javascript">
-    		$('.text').pullToRefresh();
-    		$('.text').on("pull-to-refresh", function() {
-    			$('.text').pullToRefreshDone();
+    		$('#tab1').pullToRefresh();
+    		$('#tab1').on("pull-to-refresh", function() {
+    			$('#tab1').pullToRefreshDone();
     		});
     	</script>
     </body>
